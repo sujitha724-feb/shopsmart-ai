@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSmart AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ShopSmart <span>AI</span></div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button onclick="searchProducts()">🔍</button>
+    </div>
+
+    <div class="icons">
+        <button>❤️</button>
+        <button>🛒</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div>
+        <p class="tag">SMART SHOPPING • AI POWERED</p>
+        <h1>Find what you love,<br><span>shop smarter.</span></h1>
+        <p>Discover products based on your style, occasion and budget.</p>
+
+        <button class="ai-button" onclick="openAI()">
+            🤖 Ask ShopSmart AI
+        </button>
+    </div>
+</section>
+
+<section class="categories">
+    <h2>Shop by Category</h2>
+
+    <div class="category-list">
+        <button onclick="filterCategory('Fashion')">👗 Fashion</button>
+        <button onclick="filterCategory('Beauty')">💄 Beauty</button>
+        <button onclick="filterCategory('Home')">🏠 Home</button>
+        <button onclick="filterCategory('Electronics')">📱 Electronics</button>
+    </div>
+</section>
+
+<section class="products-section">
+    <div class="section-title">
+        <h2>Popular Products</h2>
+        <button onclick="showAll()">View All</button>
+    </div>
+
+    <div id="productContainer" class="products"></div>
+</section>
+
+<div id="aiPanel" class="ai-panel">
+
+    <div class="ai-header">
+        <h2>🤖 ShopSmart AI</h2>
+        <button onclick="closeAI()">✕</button>
+    </div>
+
+    <div id="chatMessages" class="chat-messages">
+        <div class="ai-message">
+            Hi! 👋 I'm your shopping assistant.<br><br>
+            Tell me what you're looking for.
+            <br><br>
+            Example: <b>"Dress for a wedding under ₹1500"</b>
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input
+            id="aiInput"
+            type="text"
+            placeholder="Ask me anything..."
+            onkeypress="handleEnter(event)"
+        >
+        <button onclick="sendAI()">➤</button>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 ShopSmart AI</p>
+    <p>AI-powered e-commerce project</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
